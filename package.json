@@ -1,0 +1,18 @@
+{
+  "name": "sublimeregalo",
+  "version": "1.0.0",
+  "description": "Proyecto de tienda en línea para Sublimeregalo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Miller Rico",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

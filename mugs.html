@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el tipo de documento y el idioma de la página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página sea responsive -->
+    <title>SublimeRegalo/Mug's</title> <!-- Título que aparecerá en la pestaña del navegador -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para estilos -->
+</head>
+
+<body>
+    <!-- Inicio del encabezado -->
+    <header>
+        <!-- Sección del logo -->
+        <div class="logo">
+            <!-- Imagen del logo, asegúrate de reemplazar la ruta con la imagen correcta -->
+            <a href="index.html">
+                <img src="images/HorizontalBlanco.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul> <!-- Lista de enlaces de navegación -->
+                <li><a href="mugs.html">MUG'S</a></li> <!-- Enlace de navegación a Mugs -->
+                <li><a href="llaveros.html">LLAVEROS</a></li> <!-- Enlace de navegación a Llaveros -->
+                <li><a href="ceramicas.html">CERAMICAS</a></li> <!-- Enlace de navegación a Ceramicas -->
+                <li><a href="camisetas.html">CAMISETAS</a></li> <!-- Enlace de navegación a Camisetas -->
+                <li><a href="otros_textiles.html">OTROS TEXTILES</a></li> <!-- Enlace de navegación a Otros Textiles -->
+                <li><a href="impresos.html">IMPRESOS</a></li> <!-- Enlace de navegación a Impresos -->
+                <li><a href="#">NUESTROS CLIENTES</a></li> <!-- Enlace de navegación a Nuestros Clientes -->
+                <li><a href="contacto.html">CONTACTO</a></li> <!-- Enlace de navegación a Contacto -->
+            </ul>
+        </nav>
+
+        <!-- Sección de íconos (búsqueda, lista de deseos, carrito de compras) -->
+        <div class="icons">
+            <!-- Icono de búsqueda (sin contador) -->
+            <a href="#">
+                <img src="images/IcoSearch.png" alt="Buscar" class="icon"> <!-- Imagen de búsqueda -->
+            </a>
+
+            <!-- Icono de lista de deseos con contador -->
+            <a href="#">
+                <img src="images/IcoHeart.png" alt="Lista de deseos" class="icon"> <!-- Imagen de lista de deseos -->
+                <span id="wishlistCount">0</span> <!-- Contador de lista de deseos -->
+            </a>
+
+            <!-- Icono de carrito de compras con contador -->
+            <a href="#">
+                <img src="images/IcoShop.png" alt="Carrito de compras" class="icon">
+                <!-- Imagen de carrito de compras -->
+                <span id="cartCount">0</span> <!-- Contador de carrito de compras -->
+            </a>
+        </div>
+    </header>
+    <br><br><br><br>
+    <!-- Sección principal con los productos -->
+    <main>
+        <h1>Nuestros Mugs</h1>
+
+        <!-- Contenedor para las columnas de productos -->
+        <div class="productos">
+            <!-- 1 producto -->
+            <div class="producto">
+                <img src="images/MUG/1-mug-blanco-sublimacion.jpg" alt="Mug Blanco 11oz">
+                <h2>Mug Blanco 11oz</h2>
+                <p>$15.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $10.000 c/u</li>
+                    <li>12 a 23 unidades: $9.000 c/u</li>
+                    <li>24 unidades o más: $8.000 c/u</li>
+                </ul>
+                <select class="quantity-selector" data-product-id="1">
+                    <option value="1">1</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                </select>
+                <button class="add-to-cart" data-product-id="1">Agregar al carrito</button>
+            </div>
+
+            <!-- 2 producto -->
+            <div class="producto">
+                <img src="images/MUG/2-mug-color-sublimacion.jpg" alt="Mug Color">
+                <h2>Mug Color</h2>
+                <p>$21.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $16.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 3 producto -->
+            <div class="producto">
+                <img src="images/MUG/3-mug-vintage-sublimacion.jpg" alt="Mug Vintage">
+                <h2>Mug Vintage</h2>
+                <p>$21.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $16.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 4 producto -->
+            <div class="producto">
+                <img src="images/MUG/4-mug-color-cuchara.jpg" alt="Mug Color Cuchara">
+                <h2>Mug Color Cuchara</h2>
+                <p>$21.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $16.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 5 producto -->
+            <div class="producto">
+                <img src="images/MUG/5-mug-oreja-corazon.jpg" alt="Mug Oreja Corazon">
+                <h2>Mug Oreja Corazon</h2>
+                <p>$17.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $12.000 c/u</li>
+                    <li>12 a 23 unidades: $11.000 c/u</li>
+                    <li>24 unidades o más: $10.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 6 producto -->
+            <div class="producto">
+                <img src="images/MUG/6-mug-magico.png" alt="Mug Magico">
+                <h2>Mug Magico</h2>
+                <p>$21.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $16.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 7 producto -->
+            <div class="producto">
+                <img src="images/MUG/7-mug-pitillo.jpg" alt="Mug Pitillo">
+                <h2>Mug Pitillo</h2>
+                <p>$22.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $17.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 8 producto -->
+            <div class="producto">
+                <img src="images/MUG/8-mug-apilable-x2.jpg" alt="Mug Apilable">
+                <h2>Mug Apilable X2</h2>
+                <p>$23.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $19.000 c/u</li>
+                    <li>12 a 23 unidades: $17.000 c/u</li>
+                    <li>24 unidades o más: $16.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 9 producto -->
+            <div class="producto">
+                <img src="images/MUG/9-Mug-cafe-6-onzas.png" alt="Mug Cafe 6OZ">
+                <h2>Mug Cafe 6 Onzas</h2>
+                <p>$15.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $10.000 c/u</li>
+                    <li>12 a 23 unidades: $9.000 c/u</li>
+                    <li>24 unidades o más: $8.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 10 producto -->
+            <div class="producto">
+                <img src="images/MUG/10-mug-pareja.jpg" alt="Mug Pareja">
+                <h2>Mug Pareja</h2>
+                <p>$22.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $17.000 c/u</li>
+                    <li>12 a 23 unidades: $16.000 c/u</li>
+                    <li>24 unidades o más: $15.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 11 producto -->
+            <div class="producto">
+                <img src="images/MUG/11-mug-conico.jpg" alt="Mug Conico">
+                <h2>Mug Conico</h2>
+                <p>$15.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $10.000 c/u</li>
+                    <li>12 a 23 unidades: $9.000 c/u</li>
+                    <li>24 unidades o más: $8.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 12 producto -->
+            <div class="producto">
+                <img src="images/MUG/12-mug-oreja-corazon.jpg" alt="Mug Oreja Corazon">
+                <h2>Mug Oreja Corazon</h2>
+                <p>$19.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $16.000 c/u</li>
+                    <li>12 a 23 unidades: $14.000 c/u</li>
+                    <li>24 unidades o más: $12.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 13 producto -->
+            <div class="producto">
+                <img src="images/MUG/13-Mug-cafe-6-oz.jpg" alt="Mug Cafe 6 Oz">
+                <h2>Mug Cafe 6 Onzas</h2>
+                <p>$13.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $9.000 c/u</li>
+                    <li>12 a 23 unidades: $8.000 c/u</li>
+                    <li>24 unidades o más: $7.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 14 producto -->
+            <div class="producto">
+                <img src="images/MUG/14-mug-cervecero.jpg" alt="Mug Cervecero">
+                <h2>Mug Cervecero</h2>
+                <p>$22.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $17.000 c/u</li>
+                    <li>12 a 23 unidades: $15.000 c/u</li>
+                    <li>24 unidades o más: $14.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 15 producto -->
+            <div class="producto">
+                <img src="images/MUG/15-botilito-lata-para-sublimacion (1).jpg" alt="Botilito">
+                <h2>Botilito Metalico</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 16 producto -->
+            <div class="producto">
+                <img src="images/MUG/16-mug-grande-con-tapa (2).jpg" alt="Mug Grande Tapa">
+                <h2>Mug Grande con Tapa</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 17 producto -->
+            <div class="producto">
+                <img src="images/MUG/17-mug-mediano-con-tapa (2).jpg" alt="Mug Mediano Tapa">
+                <h2>Mug Mediano con Tapa</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 18 producto -->
+            <div class="producto">
+                <img src="images/MUG/18-mug-pequeno-con-tapa (2).jpg" alt="Mug Pequeño Tapa">
+                <h2>Mug Pequeño con Tapa</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 19 producto -->
+            <div class="producto">
+                <img src="images/MUG/19-mug-viajero-big (1).jpg" alt="Viajero">
+                <h2>Vaso Viajero Big</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 20 producto -->
+            <div class="producto">
+                <img src="images/MUG/20-vaso-barril-viajero-10-oz-2.jpg" alt="Vaso Barril">
+                <h2>Vaso Barril Viajero</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 21 producto -->
+            <div class="producto">
+                <img src="images/MUG/21-vaso-viajero-forte (1).jpg" alt="Mug Vaso Forte">
+                <h2>Vaso Barril Forte</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 22 producto -->
+            <div class="producto">
+                <img src="images/MUG/22-vaso-viajero-neon-14-oz.jpg" alt="Mug Vaso Neon">
+                <h2>Vaso Viajero Neon</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 23 producto -->
+            <div class="producto">
+                <img src="images/MUG/23-vaso-viajero-winter (2).jpg" alt="Mug Vaso Winter">
+                <h2>Vaso Viajero Winter</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+            <!-- 24 producto -->
+            <div class="producto">
+                <img src="images/MUG/24-pocillo-10-oz.jpg" alt="Mug Pocillo 10 Oz">
+                <h2>Pocillo 10 Onzas</h2>
+                <p>$XX.000</p>
+                <ul>
+                    <li>6 a 11 unidades: $XX.000 c/u</li>
+                    <li>12 a 23 unidades: $XX.000 c/u</li>
+                    <li>24 unidades o más: $XX.000 c/u</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- Ícono fijo de WhatsApp en la esquina inferior derecha -->
+    <a href="https://wa.me/573057888688" class="whatsapp-icon" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+    <br><br>
+    <!-- Sección de suscripción -->
+    <section class="subscribe-section">
+        <div class="subscribe-container">
+            <div class="subscribe-text">
+                <i class="fas fa-envelope"></i>
+                <span><strong>Entérate de Nuestras Promociones</strong></span>
+            </div>
+            <div class="subscribe-form">
+                <input type="email" id="email" placeholder="Escribe tu Correo Electrónico">
+                <button class="subscribe-btn" onclick="validateEmail()">Suscribirse</button>
+            </div>
+        </div>
+        <p id="error-message" style="color: red; display: none;">Por favor, introduce un correo electrónico válido.</p>
+    </section>
+
+    <footer>
+        <div class="footer-container"> <!-- Contenedor principal del pie de página -->
+            <!-- Columna del logo y redes sociales -->
+            <div class="footer-column">
+                <a href="index.html">
+                    <img src="images/VerticalBlanco.png" alt="Logo" class="footer-logo"> <!-- Logo de la empresa -->
+                </a>
+                <div class="social-icons"> <!-- Iconos de redes sociales -->
+                    <a href="#"><img src="images/IcoFB.png" alt="Facebook"></a> <!-- Icono de Facebook -->
+                    <a href="#"><img src="images/IcoIG.png" alt="Instagram"></a> <!-- Icono de Instagram -->
+                    <a href="#"><img src="images/IcoWha.png" alt="Whatsapp"></a> <!-- Icono de Whatsapp -->
+                </div>
+            </div>
+
+            <!-- Columna de servicios -->
+            <div class="footer-column">
+                <h3>Servicios</h3> <!-- Título de la sección de servicios -->
+                <ul> <!-- Lista de servicios -->
+                    <li><a href="mugs.html">MUG'S</a></li>
+                    <li><a href="llaveros.html">LLAVEROS</a></li>
+                    <li><a href="ceramicas.html">CERAMICAS</a></li>
+                    <li><a href="camisetas.html">CAMISETAS</a></li>
+                    <li><a href="otros_textiles.html">OTROS TEXTILES</a></li>
+                    <li><a href="impresos.html">IMPRESOS</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna de contacto -->
+            <div class="footer-column">
+                <h3>Contacto</h3> <!-- Título de la sección de contacto -->
+                <ul class="contact-list"> <!-- Lista de contacto -->
+                    <li><img src="images/IcoPhone.png" alt="Teléfono"> <!-- Icono de teléfono -->
+                        305 788 8688
+                    </li>
+                    <li><img src="images/IcoMail.png" alt="Correo"> <!-- Icono de correo electrónico -->
+                        sublimeregalo@gmail.com
+                    </li>
+                    <li><img src="images/IcoCal.png" alt="Horario"> <!-- Icono de horario -->
+                        Lun - Vie. 9 am - 5 pm
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script> <!-- Archivo JS externo -->
+    <script src="index.js"></script> <!-- Archivo JS externo -->
+    <script src="contacto.js"></script> <!-- Archivo JS externo -->
+</body>
+
+</html>
