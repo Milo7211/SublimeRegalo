@@ -85,48 +85,35 @@
       <!-- Título para el formulario -->
       <h2>Enviar mensaje</h2>
       <!-- Formulario de contacto -->
-      <form action="/enviar-mensaje" method="post">
+      <form action="http://localhost:3000/contacto" method="post">
         <!-- Grupo de campo para el nombre -->
         <div class="form-group">
-          <!-- Etiqueta del campo nombre -->
           <label for="name">Nombre *</label>
-          <!-- Input para el nombre, requerido -->
           <input type="text" id="name" name="name" required>
         </div>
         <!-- Grupo de campo para el email -->
         <div class="form-group">
-          <!-- Etiqueta del campo email -->
           <label for="email">Email *</label>
-          <!-- Input para el email, requerido -->
           <input type="email" id="email" name="email" required>
         </div>
-         <!-- Grupo de campo para el Whatsapp -->
-         <div class="form-group">
-            <!-- Etiqueta del campo whattsapp -->
-            <label for="Whatsapp">Whatsapp *</label>
-            <!-- Input para el Whatsapp, requerido -->
-            <input type="whatsapp" id="whatsapp" name="whatsapp" required>
-          </div>
+        <!-- Grupo de campo para el Whatsapp -->
+        <div class="form-group">
+          <label for="whatsapp">Whatsapp *</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required>
+        </div>
         <!-- Grupo de campo para el asunto -->
         <div class="form-group">
-          <!-- Etiqueta del campo asunto -->
           <label for="subject">Asunto</label>
-          <!-- Input para el asunto -->
           <input type="text" id="subject" name="subject">
         </div>
         <!-- Grupo de campo para el mensaje -->
         <div class="form-group">
-          <!-- Etiqueta del campo mensaje -->
           <label for="message">Mensaje</label>
-          <!-- Textarea para el mensaje -->
           <textarea id="message" name="message"></textarea>
         </div>
-        
-        <!-- Botón de envío del formulario -->
         <button type="submit">Enviar Mensaje</button>
-        <!-- Div para mostrar mensajes de error -->
-       <div id="error-message" style="color: red; display: none;"></div> <!-- Mensaje de error oculto inicialmente -->
-      </form>
+    </form>
+    
     </div>
   
   </div>
