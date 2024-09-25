@@ -516,4 +516,39 @@ footer {
   button[type="submit"]:hover {
     background-color: #003d80; /* Color más oscuro al pasar sobre el botón */
   }
-    
+
+  /* Estilos para el mensaje de error */
+#error-message {
+    color: red;                /* Color del texto */
+    font-weight: bold;        /* Texto en negrita */
+    display: none;            /* Ocultar inicialmente */
+    margin-top: 10px;        /* Espacio superior */
+}
+
+/* Estilos para formularios (opcional) */
+form {
+    margin: 20px 0;          /* Espaciado del formulario */
+}
+
+/* Estilos para los inputs (opcional) */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;             /* Ancho completo */
+    padding: 10px;          /* Espaciado interno */
+    margin: 5px 0;          /* Espaciado superior e inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;     /* Bordes redondeados */
+}
+
+/* Estilos para los botones (opcional) */
+button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white;              /* Color del texto */
+    padding: 10px 15px;       /* Espaciado interno */
+    border: none;              /* Sin borde */
+    border-radius: 5px;       /* Bordes redondeados */
+    cursor: pointer;           /* Cursor de mano al pasar por encima */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}

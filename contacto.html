@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página sea responsive -->
     <title>SublimeRegalo/Contacto</title> <!-- Título que aparecerá en la pestaña del navegador -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para estilos -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para estilos -->    
+    <script src="/public/contacto.js" defer></script><!-- Enlazar el archivo contacto.js -->
 </head>
 <body>
     <!-- Inicio del encabezado -->
@@ -84,7 +85,7 @@
       <!-- Título para el formulario -->
       <h2>Enviar mensaje</h2>
       <!-- Formulario de contacto -->
-      <form action="#" method="post">
+      <form action="/enviar-mensaje" method="post">
         <!-- Grupo de campo para el nombre -->
         <div class="form-group">
           <!-- Etiqueta del campo nombre -->
@@ -120,8 +121,11 @@
           <!-- Textarea para el mensaje -->
           <textarea id="message" name="message"></textarea>
         </div>
+        
         <!-- Botón de envío del formulario -->
         <button type="submit">Enviar Mensaje</button>
+        <!-- Div para mostrar mensajes de error -->
+       <div id="error-message" style="color: red; display: none;"></div> <!-- Mensaje de error oculto inicialmente -->
       </form>
     </div>
   
@@ -191,6 +195,6 @@
             </div>
         </div>
     </footer>
-    
+    <script src="contacto.js"></script>    
 </body>
 </html>
