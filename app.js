@@ -26,11 +26,18 @@ connection.connect((err) => {
     console.log('Conectado a la base de datos.'); // Muestra un mensaje de éxito si la conexión es correcta
 });
 
+// Middleware para servir archivos estáticos (CSS, JS)
+    app.use(express.static(__dirname));
+
+// Middleware para analizar el cuerpo de las solicitudes POST
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+
 // Ruta POST para recibir los datos del formulario y guardarlos en la base de datos
 app.post('/contacto', (req, res) => {
     // Extraer los datos del formulario enviados en el cuerpo de la solicitud
     const { name, email, whatsapp, subject, message } = req.body;
-
+    
     // Consulta SQL para insertar los datos en la tabla 'contacto'
     const query = 'INSERT INTO contacto (nombreUsuario, correoUsuario, whatsappUsuario, asuntoUsuario, mensajeUsuario) VALUES (?, ?, ?, ?, ?)';
 
@@ -41,10 +48,11 @@ app.post('/contacto', (req, res) => {
             return res.status(500).send('Error al enviar el mensaje.'); // Envía una respuesta de error al cliente
         }
         res.send('Mensaje enviado correctamente.'); // Envía una respuesta de éxito al cliente
+        console.error('Mensaje enviado correctamente', query); // Muestra un error si la consulta falla<
     });
 });
 
-// Inicia el servidor para escuchar en el puerto 3000
+// Inicia el servidor para escuchar en el puerto seleccionado
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`); // Muestra un mensaje cuando el servidor está listo
 });

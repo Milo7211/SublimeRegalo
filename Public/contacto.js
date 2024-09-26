@@ -23,12 +23,32 @@ document.addEventListener('DOMContentLoaded', function() {
             return; // Detener la ejecución si hay un error
         }
 
-        // Aquí puedes agregar lógica para procesar el formulario (enviarlo a un servidor, etc.)
-        console.log({ name, email, whatsapp, subject, message });
-        alert('Mensaje enviado. ¡Gracias por contactarnos!');
+        // Crear un objeto con los datos del formulario
+        const formData = { name, email, whatsapp, subject, message };
 
-        // Limpiar el formulario
-        form.reset();
+        // Enviar los datos al servidor utilizando fetch
+        fetch('/contacto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', // Enviar los datos como JSON
+            },
+            body: JSON.stringify(formData), // Convertir los datos a JSON
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); // Obtener el mensaje de respuesta del servidor
+            } else {
+                throw new Error('Error en el envío del formulario.');
+            }
+        })
+        .then(message => {
+            alert(message); // Mostrar el mensaje de éxito del servidor
+            form.reset(); // Limpiar el formulario
+        })
+        .catch(error => {
+            errorMessage.textContent = error.message; // Mostrar el error en el frontend
+            errorMessage.style.display = "block";
+        });
     });
 });
 
@@ -36,12 +56,4 @@ document.addEventListener('DOMContentLoaded', function() {
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar email
     return regex.test(email);
-}
-// Al enviar el formulario, se pueden mostrar mensajes de error así:
-if (!isValid) {
-    document.getElementById('error-message').textContent = 'Por favor, complete todos los campos obligatorios.';
-    document.getElementById('error-message').style.display = 'block'; // Muestra el mensaje de error
-} else {
-    document.getElementById('error-message').style.display = 'none'; // Oculta el mensaje de error
-    // Procesar el formulario
 }
