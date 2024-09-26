@@ -1,9 +1,9 @@
 const express = require('express'); // Importa el módulo express para crear el servidor
 const bodyParser = require('body-parser'); // Importa body-parser para manejar los datos del formulario
-const mysql = require('mysql'); // Importa mysql para conectarse a la base de datos MySQL
+const mysql = require('mysql2'); // Importa mysql para conectarse a la base de datos MySQL
 
 const app = express(); // Crea una nueva aplicación Express
-const port = 3000; // Define el puerto donde el servidor escuchará (cambiado a 3000)
+const port = 3001; // Define el puerto donde el servidor escuchará (cambiado a 3000)
 
 // Configuración de body-parser para analizar el cuerpo de las solicitudes HTTP
 app.use(bodyParser.urlencoded({ extended: true })); // Habilita el manejo de datos codificados en la URL
@@ -13,7 +13,7 @@ app.use(bodyParser.json()); // Habilita el manejo de datos en formato JSON
 const connection = mysql.createConnection({
     host: 'localhost', // Dirección del servidor de la base de datos (localhost si es local)
     user: 'root', // El nombre de usuario para acceder a MySQL
-    password: '', // La contraseña para acceder a MySQL
+    password: '1234', // La contraseña para acceder a MySQL
     database: 'sublimeregalo' // El nombre de la base de datos donde se guardarán los datos
 });
 
