@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Importa body-parser para manejar l
 const mysql = require('mysql2'); // Importa mysql para conectarse a la base de datos MySQL
 
 const app = express(); // Crea una nueva aplicación Express
-const port = 3001; // Define el puerto donde el servidor escuchará (cambiado a 3000)
+const port = 3000; // Define el puerto donde el servidor escuchará (cambiado a 3000)
 
 // Configuración de body-parser para analizar el cuerpo de las solicitudes HTTP
 app.use(bodyParser.urlencoded({ extended: true })); // Habilita el manejo de datos codificados en la URL

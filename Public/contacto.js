@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const errorMessage = document.getElementById("error-message");
         errorMessage.style.display = "none"; // Ocultar el mensaje de error al inicio
 
-        // Validar datos
+        // Validar datos email
         if (!validateEmail(email)) {
             errorMessage.textContent = "Por favor, ingrese un correo electrónico válido."; // Personaliza el mensaje
             errorMessage.style.display = "block"; // Muestra el mensaje
